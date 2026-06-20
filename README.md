@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Tasvee Design School
+
+SEO-optimized marketing website for **Tasvee Design School** — built with Next.js, TypeScript, and Tailwind CSS.
+
+## Pages
+
+- **Home** — Hero, stats, courses preview, projects, learning journey, mentor, testimonials
+- **About Us** — Story, mission/vision/values, mentor profile
+- **Courses** — Full course catalog with details
+- **Success Stories** — Student stories, testimonials, hiring partners
+- **Contact** — Contact form, map, FAQ
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Environment Variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Copy `.env.example` to `.env.local`:
 
-## Learn More
+```bash
+cp .env.example .env.local
+```
 
-To learn more about Next.js, take a look at the following resources:
+| Variable | Description |
+|----------|-------------|
+| `NEXT_PUBLIC_SITE_URL` | Your production domain (for SEO/sitemap) |
+| `CONTACT_EMAIL` | Where form submissions are sent |
+| `RESEND_API_KEY` | [Resend](https://resend.com) API key for email delivery |
+| `CONTACT_FROM_EMAIL` | Verified sender address in Resend |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The contact form works without Resend (submissions are logged server-side). Add Resend for production email delivery.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deploy to Vercel + GoDaddy Domain
 
-## Deploy on Vercel
+1. Push this repo to GitHub
+2. Import the project on [Vercel](https://vercel.com)
+3. Add environment variables in Vercel project settings
+4. In Vercel → **Settings → Domains**, add your GoDaddy domain
+5. In GoDaddy → **DNS**, point nameservers or A/CNAME records to Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## SEO Features
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Per-page metadata (title, description, Open Graph)
+- `sitemap.xml` and `robots.txt`
+- Semantic HTML structure
+- JSON-LD structured data on Contact page
+- Static generation for fast load times
+
+## Customization
+
+- **Content**: Edit `src/lib/site-config.ts`
+- **Images**: Replace placeholder gradients with real images in `public/images/`
+- **Colors**: Brand red is `#E11D2E` in `globals.css`
