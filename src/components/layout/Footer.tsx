@@ -8,7 +8,7 @@ export function Footer() {
 
   return (
     <footer className="bg-tasvee-black text-white">
-      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-16 lg:grid-cols-5 lg:px-8">
+      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-16 sm:grid-cols-2 lg:grid-cols-4 lg:px-8">
         <div className="lg:col-span-1">
           <p className="text-sm font-bold tracking-wider">
             TASVEE
@@ -87,28 +87,6 @@ export function Footer() {
               <span>{siteConfig.address}</span>
             </li>
           </ul>
-        </div>
-
-        <div>
-          <h3 className="mb-4 text-xs font-bold uppercase tracking-widest text-gray-400">
-            Newsletter
-          </h3>
-          <p className="mb-3 text-sm text-gray-400">
-            Subscribe to get updates on courses and events.
-          </p>
-          <form className="flex gap-2">
-            <input
-              type="email"
-              placeholder="Your email"
-              className="flex-1 rounded-full border border-white/20 bg-white/5 px-4 py-2 text-sm text-white placeholder:text-gray-500 focus:border-tasvee-red focus:outline-none"
-            />
-            <button
-              type="submit"
-              className="rounded-full bg-tasvee-red px-4 py-2 text-sm font-semibold hover:bg-red-700"
-            >
-              →
-            </button>
-          </form>
         </div>
       </div>
 

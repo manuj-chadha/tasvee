@@ -19,12 +19,12 @@ export function TestimonialsCarousel() {
           What Our <span className="text-tasvee-red">Students</span> Say
         </h2>
 
-        <div className="relative">
+        <div className="relative px-10 md:px-12">
           <button
             type="button"
             onClick={prev}
             disabled={current === 0}
-            className="absolute -left-4 top-1/2 z-10 -translate-y-1/2 rounded-full border bg-white p-2 shadow disabled:opacity-30 md:-left-6"
+            className="absolute left-0 top-1/2 z-10 -translate-y-1/2 rounded-full border bg-white p-2 shadow disabled:opacity-30"
             aria-label="Previous testimonials"
           >
             <ChevronLeft className="h-5 w-5" />
@@ -70,7 +70,7 @@ export function TestimonialsCarousel() {
             type="button"
             onClick={next}
             disabled={current >= maxIndex}
-            className="absolute -right-4 top-1/2 z-10 -translate-y-1/2 rounded-full border bg-white p-2 shadow disabled:opacity-30 md:-right-6"
+            className="absolute right-0 top-1/2 z-10 -translate-y-1/2 rounded-full border bg-white p-2 shadow disabled:opacity-30"
             aria-label="Next testimonials"
           >
             <ChevronRight className="h-5 w-5" />

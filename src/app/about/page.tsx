@@ -1,13 +1,8 @@
 import {
-  Award,
-  Briefcase,
   Check,
   Eye,
-  Layers,
-  Play,
   Sparkles,
   Target,
-  Users,
 } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { CTABanner } from "@/components/sections/CTABanner";
@@ -28,13 +23,6 @@ export const metadata = createPageMetadata({
   path: "/about",
 });
 
-const heroFeatures = [
-  { icon: Users, label: "Industry Expert Mentors" },
-  { icon: Layers, label: "Practical Learning" },
-  { icon: Briefcase, label: "Live Projects & Portfolio" },
-  { icon: Award, label: "Career Support & Placement Guidance" },
-];
-
 export default function AboutPage() {
   return (
     <>
@@ -49,19 +37,11 @@ export default function AboutPage() {
             Where Creativity Becomes{" "}
             <span className="text-tasvee-red">Career.</span>
           </h1>
-          <p className="mb-8 max-w-xl text-gray-400">
+          <p className="max-w-xl text-gray-400">
             Tasvee Design School is a creative learning platform dedicated to
             transforming passion into profession through design, video, and
             animation training.
           </p>
-          <div className="flex flex-wrap gap-6">
-            {heroFeatures.map(({ icon: Icon, label }) => (
-              <div key={label} className="flex items-center gap-2 text-sm">
-                <Icon className="h-5 w-5 text-tasvee-red" />
-                <span className="text-gray-300">{label}</span>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -69,48 +49,30 @@ export default function AboutPage() {
 
       {/* Our Story */}
       <section className="py-24">
-        <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 lg:grid-cols-2 lg:px-8">
-          <div>
-            <SectionHeading
-              eyebrow="Our Story"
-              title={
-                <>
-                  Built with <span className="text-tasvee-red">Passion.</span>{" "}
-                  Driven by <span className="text-tasvee-red">Purpose.</span>
-                </>
-              }
-            />
-            <p className="mt-6 text-gray-600 leading-relaxed">
-              Tasvee Design School was founded with a vision to provide
-              high-quality, practical design education accessible to everyone.
-              We believe creativity should not be limited — it should become a
-              sustainable career.
-            </p>
-            <p className="mt-4 text-gray-600 leading-relaxed">
-              From day one, our focus has been on industry-relevant skills,
-              hands-on projects, and mentorship that prepares students for
-              real-world creative careers.
-            </p>
-            <Button href="/success-stories" variant="ghost" showArrow className="mt-8">
-              Our Journey
-            </Button>
-          </div>
-          <div className="relative">
-            <div className="aspect-video overflow-hidden rounded-2xl bg-gradient-to-br from-gray-800 to-gray-900">
-              <div className="flex h-full items-center justify-center">
-                <button
-                  type="button"
-                  className="flex h-16 w-16 items-center justify-center rounded-full bg-tasvee-red shadow-lg transition-transform hover:scale-105"
-                  aria-label="Play our story video"
-                >
-                  <Play className="h-7 w-7 fill-white text-white" />
-                </button>
-              </div>
-            </div>
-            <p className="mt-3 text-sm font-medium text-tasvee-red">
-              → Play Our Story
-            </p>
-          </div>
+        <div className="mx-auto max-w-3xl px-4 lg:px-8">
+          <SectionHeading
+            eyebrow="Our Story"
+            title={
+              <>
+                Built with <span className="text-tasvee-red">Passion.</span>{" "}
+                Driven by <span className="text-tasvee-red">Purpose.</span>
+              </>
+            }
+          />
+          <p className="mt-6 text-gray-600 leading-relaxed">
+            Tasvee Design School was founded with a vision to provide
+            high-quality, practical design education accessible to everyone.
+            We believe creativity should not be limited — it should become a
+            sustainable career.
+          </p>
+          <p className="mt-4 text-gray-600 leading-relaxed">
+            From day one, our focus has been on industry-relevant skills,
+            hands-on projects, and mentorship that prepares students for
+            real-world creative careers.
+          </p>
+          <Button href="/contact" variant="ghost" showArrow className="mt-8">
+            Our Journey
+          </Button>
         </div>
       </section>
 

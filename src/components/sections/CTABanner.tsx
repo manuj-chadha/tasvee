@@ -1,4 +1,4 @@
-import { Calendar, Phone, Rocket } from "lucide-react";
+import { Phone, Rocket } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { siteConfig } from "@/lib/site-config";
 
@@ -12,12 +12,12 @@ type CTABannerProps = {
 export function CTABanner({
   title = "Ready to Start Your Creative Career?",
   subtitle = "Join Tasvee Design School and turn your creativity into a profession.",
-  primaryLabel = "Book Demo Class",
+  primaryLabel = "Apply Now",
   secondaryLabel = "Call Now",
 }: CTABannerProps) {
   return (
-    <section className="mx-4 my-16 lg:mx-auto lg:max-w-6xl">
-      <div className="flex flex-col items-center justify-between gap-6 rounded-2xl bg-tasvee-red px-8 py-10 md:flex-row">
+    <section className="w-full px-4 py-16">
+      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 rounded-2xl bg-tasvee-red px-8 py-10 md:flex-row">
         <div className="flex items-start gap-4 text-white">
           <Rocket className="mt-1 h-8 w-8 shrink-0" />
           <div>
@@ -26,8 +26,7 @@ export function CTABanner({
           </div>
         </div>
         <div className="flex shrink-0 flex-col gap-3 sm:flex-row">
-          <Button href="/contact" variant="white">
-            <Calendar className="h-4 w-4" />
+          <Button href="/contact" variant="white" showArrow>
             {primaryLabel}
           </Button>
           <a

@@ -3,7 +3,6 @@ import {
   Briefcase,
   Check,
   Monitor,
-  Play,
   Sparkles,
   Users,
 } from "lucide-react";
@@ -22,22 +21,13 @@ const heroFeatures = [
   { icon: Users, label: "Placement Guidance" },
 ];
 
-const projectPlaceholders = [
-  { title: "Travel Poster", color: "from-sky-500 to-blue-700" },
-  { title: "Shoe Ad", color: "from-orange-400 to-red-600" },
-  { title: "Skincare Brand", color: "from-pink-300 to-rose-500" },
-  { title: "Car Ad", color: "from-gray-600 to-gray-900" },
-  { title: "Food Promo", color: "from-yellow-400 to-orange-500" },
-  { title: "Luxury Watch", color: "from-amber-700 to-yellow-900" },
-];
-
 export default function HomePage() {
   return (
     <>
       {/* Hero */}
       <section className="relative overflow-hidden bg-tasvee-black text-white">
-        <div className="absolute inset-0 opacity-5">
-          <p className="absolute -right-20 top-20 text-[200px] font-black leading-none">
+        <div className="absolute inset-0 overflow-hidden opacity-5">
+          <p className="absolute right-0 top-20 translate-x-1/4 text-[clamp(4rem,20vw,12.5rem)] font-black leading-none">
             DESIGN
           </p>
         </div>
@@ -62,18 +52,12 @@ export default function HomePage() {
                 </div>
               ))}
             </div>
-            <div className="flex flex-wrap gap-4">
-              <Button href="/courses" showArrow>
-                Start Learning
-              </Button>
-              <Button href="/contact" variant="outline">
-                <Play className="h-4 w-4" />
-                Watch Demo
-              </Button>
-            </div>
+            <Button href="/courses" showArrow>
+              Start Learning
+            </Button>
           </div>
 
-          <div className="relative flex justify-center">
+          <div className="relative flex justify-center overflow-hidden px-2">
             <div className="relative w-full max-w-md">
               <div className="rounded-2xl bg-gradient-to-br from-gray-800 to-gray-900 p-6 shadow-2xl">
                 <div className="mb-4 flex items-center gap-2">
@@ -87,7 +71,7 @@ export default function HomePage() {
                   </p>
                 </div>
               </div>
-              <div className="absolute -right-4 top-8 flex flex-col gap-2">
+              <div className="absolute right-0 top-8 flex flex-col gap-2">
                 {["Ps", "Ai", "Ae", "Pr"].map((tool, i) => (
                   <span
                     key={tool}
@@ -98,7 +82,7 @@ export default function HomePage() {
                   </span>
                 ))}
               </div>
-              <div className="absolute -bottom-4 -left-4 rounded-xl bg-white p-3 shadow-xl">
+              <div className="absolute bottom-0 left-0 rounded-xl bg-white p-3 shadow-xl">
                 <p className="text-xs font-bold text-gray-800">500+ Students Trained</p>
                 <div className="mt-1 flex -space-x-2">
                   {["R", "P", "A", "S"].map((l) => (
@@ -182,34 +166,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Student Projects */}
-      <section className="py-24">
-        <div className="mx-auto max-w-7xl px-4 lg:px-8">
-          <div className="mb-12 flex flex-col items-start justify-between gap-4 md:flex-row md:items-end">
-            <SectionHeading
-              title={
-                <>
-                  Student Projects That <span className="text-tasvee-red">Speak</span>
-                </>
-              }
-            />
-            <Button href="/success-stories" variant="ghost" showArrow>
-              View More Projects
-            </Button>
-          </div>
-          <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-6">
-            {projectPlaceholders.map((project) => (
-              <div
-                key={project.title}
-                className={`aspect-[3/4] overflow-hidden rounded-xl bg-gradient-to-br ${project.color} p-4`}
-              >
-                <p className="text-xs font-semibold text-white/80">{project.title}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Learning Journey */}
       <section className="bg-tasvee-gray py-24">
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
@@ -221,10 +177,10 @@ export default function HomePage() {
               </>
             }
           />
-          <div className="mt-16 overflow-x-auto pb-4">
-            <div className="flex min-w-[800px] items-start justify-between">
+          <div className="mt-16 w-full overflow-x-auto pb-4">
+            <div className="flex min-w-0 items-start justify-between gap-2 sm:min-w-[640px] md:min-w-0 md:grid md:grid-cols-6 md:gap-4">
               {learningJourney.map((step, i) => (
-                <div key={step.step} className="relative flex flex-1 flex-col items-center text-center">
+                <div key={step.step} className="relative flex min-w-[100px] flex-1 flex-col items-center text-center md:min-w-0">
                   {i < learningJourney.length - 1 && (
                     <div className="absolute left-[50%] top-5 h-0.5 w-full bg-tasvee-red" />
                   )}

@@ -27,9 +27,9 @@ type StatsBarProps = {
 
 export function StatsBar({ items, columns = 4 }: StatsBarProps) {
   return (
-    <section className="relative z-10 -mt-8 mx-4 lg:mx-auto lg:max-w-6xl">
+    <section className="relative z-10 -mt-8 w-full px-4">
       <div
-        className={`grid grid-cols-2 gap-6 rounded-2xl bg-white px-6 py-8 shadow-xl lg:px-12 ${
+        className={`mx-auto grid w-full max-w-6xl grid-cols-2 gap-6 rounded-2xl bg-white px-6 py-8 shadow-xl lg:px-12 ${
           columns === 5
             ? "md:grid-cols-3 lg:grid-cols-5"
             : "md:grid-cols-4"

@@ -20,7 +20,6 @@ export const siteConfig = {
 export const navLinks = [
   { href: "/", label: "Home" },
   { href: "/courses", label: "Courses" },
-  { href: "/success-stories", label: "Success Stories" },
   { href: "/about", label: "About Us" },
   { href: "/contact", label: "Contact" },
 ] as const;
@@ -273,9 +272,9 @@ export const hiringPartners = [
 
 export const faqs = [
   {
-    question: "How can I book a demo class?",
+    question: "How can I get started?",
     answer:
-      "You can book a free demo class by clicking the 'Book Demo Class' button on our website, filling out the contact form, or calling us directly at +91 70115 61873.",
+      "Fill out the contact form on our website, call us at +91 70115 61873, or visit our Kanpur center. Our team will guide you through course options and admissions.",
   },
   {
     question: "Are classes available online or offline?",

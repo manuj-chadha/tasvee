@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Calendar, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/Button";
 import { navLinks } from "@/lib/site-config";
@@ -12,7 +12,7 @@ export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-tasvee-black text-white">
+    <header className="sticky top-0 z-50 w-full overflow-x-hidden bg-tasvee-black text-white">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 lg:px-8">
         <Link href="/" className="text-sm font-bold tracking-wider md:text-base">
           TASVEE
@@ -40,11 +40,7 @@ export function Header() {
           })}
         </nav>
 
-        <div className="hidden items-center gap-3 lg:flex">
-          <Button href="/contact" variant="outline" className="text-xs md:text-sm">
-            <Calendar className="h-4 w-4" />
-            Book Demo Class
-          </Button>
+        <div className="hidden lg:flex">
           <Button href="/contact" showArrow className="text-xs md:text-sm">
             Apply Now
           </Button>
@@ -75,10 +71,7 @@ export function Header() {
                 {link.label}
               </Link>
             ))}
-            <div className="flex flex-col gap-2 pt-2">
-              <Button href="/contact" variant="outline" className="w-full">
-                Book Demo Class
-              </Button>
+            <div className="pt-2">
               <Button href="/contact" showArrow className="w-full">
                 Apply Now
               </Button>

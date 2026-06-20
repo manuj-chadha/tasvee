@@ -128,8 +128,8 @@ export default function CoursesPage() {
       </section>
 
       {/* Counseling CTA */}
-      <section className="mx-4 lg:mx-auto lg:max-w-6xl">
-        <div className="flex flex-col items-center justify-between gap-6 rounded-2xl bg-tasvee-black px-8 py-10 text-white md:flex-row">
+      <section className="w-full px-4">
+        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 rounded-2xl bg-tasvee-black px-8 py-10 text-white md:flex-row">
           <div>
             <h2 className="text-xl font-bold md:text-2xl">
               Not Sure Which Course is Right for You?

@@ -156,28 +156,30 @@ export default function ContactPage() {
       </section>
 
       {/* Map */}
-      <section className="relative bg-tasvee-black">
-        <div className="aspect-[21/9] w-full bg-gradient-to-br from-gray-800 to-gray-900">
-          <iframe
-            title="Tasvee Design School location on map"
-            src="https://maps.google.com/maps?q=Kanpur,Uttar+Pradesh,India&output=embed"
-            className="h-full w-full border-0 opacity-80"
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          />
-        </div>
-        <div className="absolute left-8 top-1/2 max-w-sm -translate-y-1/2 rounded-2xl bg-tasvee-black/95 p-6 text-white shadow-xl lg:left-16">
-          <h2 className="text-lg font-bold">
-            We&apos;re Located in Kanpur, UP
-          </h2>
-          <p className="mt-2 text-sm text-gray-400">{siteConfig.fullAddress}</p>
-          <Button
-            href="https://maps.google.com/?q=Kanpur,Uttar+Pradesh,India"
-            variant="outline"
-            className="mt-4"
-          >
-            Get Directions
-          </Button>
+      <section className="overflow-hidden bg-tasvee-black">
+        <div className="relative">
+          <div className="aspect-[21/9] w-full min-h-[240px] bg-gradient-to-br from-gray-800 to-gray-900">
+            <iframe
+              title="Tasvee Design School location on map"
+              src="https://maps.google.com/maps?q=Kanpur,Uttar+Pradesh,India&output=embed"
+              className="h-full w-full border-0 opacity-80"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
+          <div className="border-t border-white/10 bg-tasvee-black p-6 text-white md:absolute md:left-8 md:top-1/2 md:max-w-sm md:-translate-y-1/2 md:rounded-2xl md:border md:bg-tasvee-black/95 md:p-6 md:shadow-xl lg:left-16">
+            <h2 className="text-lg font-bold">
+              We&apos;re Located in Kanpur, UP
+            </h2>
+            <p className="mt-2 text-sm text-gray-400">{siteConfig.fullAddress}</p>
+            <Button
+              href="https://maps.google.com/?q=Kanpur,Uttar+Pradesh,India"
+              variant="outline"
+              className="mt-4"
+            >
+              Get Directions
+            </Button>
+          </div>
         </div>
       </section>
 
@@ -206,8 +208,7 @@ export default function ContactPage() {
 
       <CTABanner
         title="Ready to Start Your Creative Journey?"
-        subtitle="Book your free demo class today and experience Tasvee Design School firsthand."
-        primaryLabel="Book Demo Class"
+        subtitle="Join Tasvee Design School and take the first step towards your dream career."
       />
 
       <script
