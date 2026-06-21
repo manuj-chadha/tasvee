@@ -19,7 +19,7 @@ import {
 export const metadata = createPageMetadata({
   title: "About Us",
   description:
-    "Learn about Tasvee Design School — where creativity becomes career. Industry expert mentors, practical learning, live projects, and placement guidance in Kanpur.",
+    "Learn about Tasvee Design School — where creativity becomes career. Industry expert mentors, practical learning, live projects, and placement guidance in Kota.",
   path: "/about",
 });
 

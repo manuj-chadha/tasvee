@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   ...createPageMetadata({
     title: siteConfig.name,
     description:
-      "Become a professional designer, video editor & motion artist with industry-level training at Tasvee Design School, Kanpur. Offline & online classes, live projects, and placement guidance.",
+      "Master Graphic Design, Video Editing, Motion Graphics, UI/UX, 2D/3D Animation, and AI Tools at Tasvee Design School, Kota. Online & offline classes, live projects, and expert mentorship.",
     path: "/",
   }),
   metadataBase: new URL(siteConfig.url),

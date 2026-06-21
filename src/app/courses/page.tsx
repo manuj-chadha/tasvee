@@ -16,7 +16,7 @@ import { courses, stats } from "@/lib/site-config";
 export const metadata = createPageMetadata({
   title: "Courses",
   description:
-    "Explore industry-focused courses at Tasvee Design School — Graphic Design, Video Editing, Motion Graphics, 2D/3D Animation, and AI Tools for Creators.",
+    "Explore industry-focused courses at Tasvee Design School — Graphic Design, Video Editing, Motion Graphics, UI/UX Design, 2D/3D Animation, and AI for Creators. Available online & offline.",
   path: "/courses",
 });
 

@@ -5,13 +5,15 @@ import { siteConfig } from "@/lib/site-config";
 type CTABannerProps = {
   title?: string;
   subtitle?: string;
+  tagline?: string;
   primaryLabel?: string;
   secondaryLabel?: string;
 };
 
 export function CTABanner({
-  title = "Ready to Start Your Creative Career?",
-  subtitle = "Join Tasvee Design School and turn your creativity into a profession.",
+  title = "Ready to Start Your Creative Journey?",
+  subtitle = "Join Tasvee Design School and transform your passion into profession with Online & Offline learning options, practical projects, expert mentorship, and career-focused training.",
+  tagline,
   primaryLabel = "Apply Now",
   secondaryLabel = "Call Now",
 }: CTABannerProps) {
@@ -23,6 +25,9 @@ export function CTABanner({
           <div>
             <h2 className="text-xl font-bold md:text-2xl">{title}</h2>
             <p className="mt-2 text-sm text-red-100 md:text-base">{subtitle}</p>
+            {tagline && (
+              <p className="mt-3 text-sm font-semibold text-white">{tagline}</p>
+            )}
           </div>
         </div>
         <div className="flex shrink-0 flex-col gap-3 sm:flex-row">

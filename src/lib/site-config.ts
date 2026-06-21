@@ -2,12 +2,15 @@ export const siteConfig = {
   name: "Tasvee Design School",
   tagline: "Where Creativity Becomes Career.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://tasveedesignschool.com",
-  phone: "+91 70115 61873",
-  phoneHref: "tel:+917011561873",
+  phone: "+91-9251110549",
+  phoneHref: "tel:+919251110549",
   email: "tasveedesignschool@gmail.com",
-  address: "Kanpur, Uttar Pradesh, India",
+  city: "Kota",
+  address: "Gumanpura, Kota, Rajasthan 324007",
   fullAddress:
-    "Tasvee Design School, Kanpur, Uttar Pradesh, India",
+    "First floor, 12/128, Above Rajasthan Juice Centre Kotri, Gumanpura (Raj.) 324007",
+  mapQuery:
+    "First floor, 12/128, Above Rajasthan Juice Centre Kotri, Gumanpura, Kota, Rajasthan 324007",
   hours: "Mon - Sat, 10:00 AM - 7:00 PM",
   social: {
     instagram: "https://instagram.com",
@@ -42,13 +45,13 @@ export const courses = [
     title: "Graphic Design",
     duration: "3 Months",
     description:
-      "Master visual communication with industry-standard tools and real-world design projects.",
+      "Master Photoshop, Illustrator, branding, social media design, print media, and visual communication.",
     topics: [
       "Photoshop",
       "Illustrator",
       "Branding",
-      "Social Media Creatives",
-      "Print Design",
+      "Social Media Design",
+      "Print Media",
     ],
     tools: ["Ps", "Ai"],
     color: "from-blue-600 to-blue-800",
@@ -58,12 +61,12 @@ export const courses = [
     title: "Video Editing",
     duration: "3 Months",
     description:
-      "Learn professional video editing for reels, ads, YouTube, and cinematic content.",
+      "Learn Premiere Pro, cinematic editing, YouTube videos, reels, ads, and storytelling techniques.",
     topics: [
       "Premiere Pro",
-      "Reels/Ads/YouTube",
       "Cinematic Editing",
-      "Color Grading",
+      "YouTube & Reels",
+      "Ads & Storytelling",
     ],
     tools: ["Pr"],
     color: "from-indigo-600 to-indigo-900",
@@ -73,40 +76,55 @@ export const courses = [
     title: "Motion Graphics",
     duration: "3 Months",
     description:
-      "Create stunning animations, logo reveals, and dynamic title sequences.",
+      "Create engaging animations using After Effects, kinetic typography, logo animations, and commercial motion design.",
     topics: [
       "After Effects",
+      "Kinetic Typography",
       "Logo Animation",
-      "Title Animation",
-      "Typography",
+      "Commercial Motion",
     ],
     tools: ["Ae"],
     color: "from-purple-600 to-purple-900",
   },
   {
+    slug: "ui-ux-design",
+    title: "UI/UX Design",
+    duration: "3 Months",
+    description:
+      "Design websites and mobile apps with Figma, wireframing, prototyping, and user-centered design principles.",
+    topics: [
+      "Figma",
+      "Wireframing",
+      "Prototyping",
+      "User-Centered Design",
+    ],
+    tools: ["UI"],
+    color: "from-teal-600 to-teal-900",
+  },
+  {
     slug: "2d-3d-animation",
-    title: "2D / 3D Animation",
+    title: "2D & 3D Animation",
     duration: "4-6 Months",
     description:
-      "Bring characters and products to life with professional animation techniques.",
+      "Learn character animation, modeling, texturing, rendering, and animation workflows.",
     topics: [
       "Character Animation",
-      "Product Animation",
-      "Explainer Videos",
-      "3D Basics",
+      "Modeling & Texturing",
+      "Rendering",
+      "Animation Workflows",
     ],
     tools: ["3D"],
     color: "from-orange-600 to-red-700",
   },
   {
     slug: "ai-tools",
-    title: "AI Tools for Creators",
+    title: "AI for Creators",
     duration: "2 Months",
     description:
-      "Leverage AI to supercharge your creative workflow and productivity.",
+      "Use modern AI tools to enhance creativity, speed up workflows, and stay ahead in the industry.",
     topics: [
       "AI Image Generation",
-      "Design Workflow",
+      "Creative Workflows",
       "Prompting & Automation",
     ],
     tools: ["AI"],
@@ -115,29 +133,37 @@ export const courses = [
 ];
 
 export const whyChooseItems = [
+  { title: "Online & Offline Learning Options" },
+  { title: "100% Practical, Project-Based Training" },
+  { title: "Industry-Expert Mentorship" },
+  { title: "Live Projects & Real Client Workflows" },
+  { title: "Portfolio Development" },
+  { title: "Freelancing & Career Guidance" },
+  { title: "AI-Powered Creative Skills" },
+  { title: "Small Batch Learning & Personal Attention" },
+  { title: "Lifetime Community & Support" },
+];
+
+export const flexibleLearningItems = [
   {
-    title: "Industry Expert Mentorship",
-    description: "Learn directly from professionals working in the creative industry.",
+    title: "Offline Classes",
+    description:
+      "Learn face-to-face at our Kota campus with hands-on guidance.",
   },
   {
-    title: "Practical Project-Based Learning",
-    description: "Work on real projects that build your skills and confidence.",
+    title: "Live Online Classes",
+    description:
+      "Interactive sessions with mentor support, assignments, and feedback.",
   },
   {
-    title: "Portfolio Building",
-    description: "Create a standout portfolio that impresses employers and clients.",
+    title: "Class Recordings & Resources",
+    description:
+      "Access class recordings and learning resources where applicable.",
   },
   {
-    title: "Freelancing Guidance",
-    description: "Get expert advice on starting and growing your freelance career.",
-  },
-  {
-    title: "Agency Workflow Training",
-    description: "Learn how creative agencies operate and deliver client projects.",
-  },
-  {
-    title: "AI-Powered Creative Skills",
-    description: "Stay ahead with the latest AI tools transforming the design world.",
+    title: "Equal Focus on Growth",
+    description:
+      "Practical projects, portfolio building, and career development in both formats.",
   },
 ];
 
@@ -229,7 +255,7 @@ export const successStories = [
     role: "Graphic Designer",
     company: "Pixel Digitals",
     story:
-      "From a complete beginner to a professional graphic designer working with top brands in Kanpur.",
+      "From a complete beginner to a professional graphic designer working with top brands.",
   },
   {
     name: "Priya Verma",
@@ -274,12 +300,12 @@ export const faqs = [
   {
     question: "How can I get started?",
     answer:
-      "Fill out the contact form on our website, call us at +91 70115 61873, or visit our Kanpur center. Our team will guide you through course options and admissions.",
+      "Fill out the contact form on our website, call us at +91-9251110549, or visit our Kota campus. Our team will guide you through course options and admissions.",
   },
   {
     question: "Are classes available online or offline?",
     answer:
-      "Yes! We offer both offline classes at our Kanpur center and online live classes for students across India.",
+      "Yes! We offer both offline classes at our Kota campus and live online classes for students across India.",
   },
   {
     question: "Do I need prior experience to join?",
@@ -289,7 +315,7 @@ export const faqs = [
   {
     question: "What software will I learn?",
     answer:
-      "Depending on your course, you'll learn industry-standard tools like Adobe Photoshop, Illustrator, Premiere Pro, After Effects, and AI creative tools.",
+      "Depending on your course, you'll learn industry-standard tools like Adobe Photoshop, Illustrator, Premiere Pro, After Effects, Figma, and AI creative tools.",
   },
   {
     question: "Do you provide placement assistance?",
@@ -299,7 +325,7 @@ export const faqs = [
   {
     question: "What is the course duration?",
     answer:
-      "Course durations range from 2 to 6 months depending on the program. Graphic Design, Video Editing, and Motion Graphics are 3 months each.",
+      "Course durations range from 2 to 6 months depending on the program. Graphic Design, Video Editing, Motion Graphics, and UI/UX Design are 3 months each.",
   },
 ];
 

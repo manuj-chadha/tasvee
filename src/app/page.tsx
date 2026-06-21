@@ -1,10 +1,10 @@
 import {
-  Bot,
-  Briefcase,
+  Building2,
   Check,
+  Laptop,
   Monitor,
   Sparkles,
-  Users,
+  Video,
 } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { CTABanner } from "@/components/sections/CTABanner";
@@ -12,14 +12,16 @@ import { CourseCard } from "@/components/sections/CourseCard";
 import { StatsBar } from "@/components/sections/StatsBar";
 import { TestimonialsCarousel } from "@/components/sections/TestimonialsCarousel";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { courses, learningJourney, mentor, stats, whyChooseItems } from "@/lib/site-config";
+import {
+  courses,
+  flexibleLearningItems,
+  mentor,
+  siteConfig,
+  stats,
+  whyChooseItems,
+} from "@/lib/site-config";
 
-const heroFeatures = [
-  { icon: Monitor, label: "Offline & Online Classes" },
-  { icon: Briefcase, label: "Live Projects" },
-  { icon: Bot, label: "AI Tools" },
-  { icon: Users, label: "Placement Guidance" },
-];
+const flexibleIcons = [Building2, Laptop, Video, Monitor];
 
 export default function HomePage() {
   return (
@@ -37,21 +39,24 @@ export default function HomePage() {
               Industry Focused Training
             </p>
             <h1 className="mb-6 text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
-              Learn. Create. Earn.{" "}
-              <span className="text-tasvee-red">Grow.</span>
+              Learn. Create. Grow.{" "}
+              <span className="text-tasvee-red">Earn.</span>
             </h1>
-            <p className="mb-8 max-w-lg text-gray-400">
-              Become a Professional Designer, Video Editor & Motion Artist with
-              Industry-Level Training.
+            <p className="mb-4 max-w-xl text-lg text-gray-300">
+              Master Graphic Design, Video Editing, Motion Graphics, UI/UX, 2D/3D
+              Animation, and AI Tools through Online & Offline industry-focused
+              training, live projects, and expert mentorship.
             </p>
-            <div className="mb-8 flex flex-wrap gap-4">
-              {heroFeatures.map(({ icon: Icon, label }) => (
-                <div key={label} className="flex items-center gap-2 text-sm text-gray-300">
-                  <Icon className="h-4 w-4 text-tasvee-red" />
-                  {label}
-                </div>
-              ))}
-            </div>
+            <p className="mb-4 max-w-xl text-sm leading-relaxed text-gray-400">
+              At Tasvee Design School, we don&apos;t just teach software—we help
+              you build real-world skills, an impressive portfolio, and the
+              confidence to succeed in the creative industry.
+            </p>
+            <p className="mb-8 max-w-xl text-sm leading-relaxed text-gray-400">
+              Choose the learning mode that suits you best: attend classes at our{" "}
+              {siteConfig.city} campus or join from anywhere in India through our
+              live online sessions.
+            </p>
             <Button href="/courses" showArrow>
               Start Learning
             </Button>
@@ -104,12 +109,12 @@ export default function HomePage() {
 
       {/* Why Choose */}
       <section className="py-24">
-        <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 lg:grid-cols-2 lg:px-8">
+        <div className="mx-auto grid max-w-7xl items-start gap-12 px-4 lg:grid-cols-2 lg:px-8">
           <div className="aspect-[4/3] overflow-hidden rounded-2xl bg-gradient-to-br from-gray-800 to-gray-900">
             <div className="flex h-full items-center justify-center">
               <div className="text-center">
                 <Monitor className="mx-auto mb-4 h-16 w-16 text-tasvee-red" />
-                <p className="text-sm text-gray-400">Modern Creative Classroom</p>
+                <p className="text-sm text-gray-400">Online & Offline Learning</p>
               </div>
             </div>
           </div>
@@ -123,14 +128,26 @@ export default function HomePage() {
                 </>
               }
             />
-            <div className="mt-8 grid gap-4 sm:grid-cols-2">
+            <p className="mt-6 text-sm leading-relaxed text-gray-600">
+              At Tasvee Design School, our mission is simple:{" "}
+              <span className="font-semibold text-foreground">
+                Learn. Create. Grow. Earn.
+              </span>
+            </p>
+            <p className="mt-4 text-sm leading-relaxed text-gray-600">
+              Whether you join us offline at our {siteConfig.city} campus or online
+              from the comfort of your home, you&apos;ll receive practical training,
+              personalized mentorship, and hands-on experience designed to make you
+              industry-ready.
+            </p>
+            <p className="mt-6 text-sm font-semibold text-foreground">
+              Why Students Choose Us:
+            </p>
+            <div className="mt-4 grid gap-3 sm:grid-cols-2">
               {whyChooseItems.map((item) => (
                 <div key={item.title} className="flex items-start gap-3">
                   <Check className="mt-0.5 h-5 w-5 shrink-0 text-tasvee-red" />
-                  <div>
-                    <p className="text-sm font-semibold">{item.title}</p>
-                    <p className="text-xs text-gray-500">{item.description}</p>
-                  </div>
+                  <p className="text-sm font-medium">{item.title}</p>
                 </div>
               ))}
             </div>
@@ -148,6 +165,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
           <div className="mb-12 flex flex-col items-start justify-between gap-4 md:flex-row md:items-end">
             <SectionHeading
+              eyebrow="Available in Both Online & Offline Modes"
               title={
                 <>
                   Learn Skills. <span className="text-tasvee-red">Create Impact.</span>
@@ -158,7 +176,7 @@ export default function HomePage() {
               Explore All Courses
             </Button>
           </div>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {courses.map((course) => (
               <CourseCard key={course.slug} course={course} />
             ))}
@@ -166,40 +184,40 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Learning Journey */}
-      <section className="bg-tasvee-gray py-24">
+      {/* Flexible Learning */}
+      <section className="py-24">
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
           <SectionHeading
             align="center"
+            eyebrow="Flexible Learning"
             title={
               <>
-                Your Path to <span className="text-tasvee-red">Creative Success</span>
+                Learn Your Way –{" "}
+                <span className="text-tasvee-red">Online or Offline</span>
               </>
             }
+            description={`Whether you're in ${siteConfig.city} or anywhere else in India, Tasvee Design School offers the same quality education in both modes.`}
           />
-          <div className="mt-16 w-full overflow-x-auto pb-4">
-            <div className="flex min-w-0 items-start justify-between gap-2 sm:min-w-[640px] md:min-w-0 md:grid md:grid-cols-6 md:gap-4">
-              {learningJourney.map((step, i) => (
-                <div key={step.step} className="relative flex min-w-[100px] flex-1 flex-col items-center text-center md:min-w-0">
-                  {i < learningJourney.length - 1 && (
-                    <div className="absolute left-[50%] top-5 h-0.5 w-full bg-tasvee-red" />
-                  )}
-                  <div className="relative z-10 flex h-10 w-10 items-center justify-center rounded-full bg-tasvee-red text-sm font-bold text-white">
-                    {i + 1}
-                  </div>
-                  <p className="mt-3 text-sm font-bold">{step.step}</p>
-                  <p className="mt-1 max-w-[120px] text-xs text-gray-500">
-                    {step.subtitle}
-                  </p>
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {flexibleLearningItems.map((item, i) => {
+              const Icon = flexibleIcons[i] ?? Monitor;
+              return (
+                <div
+                  key={item.title}
+                  className="rounded-2xl border bg-white p-6 shadow-sm"
+                >
+                  <Icon className="mb-4 h-8 w-8 text-tasvee-red" />
+                  <h3 className="mb-2 font-bold">{item.title}</h3>
+                  <p className="text-sm text-gray-600">{item.description}</p>
                 </div>
-              ))}
-            </div>
+              );
+            })}
           </div>
         </div>
       </section>
 
       {/* Mentor */}
-      <section className="py-24">
+      <section className="bg-tasvee-gray py-24">
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
           <p className="mb-8 text-center text-xs font-bold uppercase tracking-widest text-tasvee-red">
             Meet Your Mentor
@@ -239,7 +257,12 @@ export default function HomePage() {
       </section>
 
       <TestimonialsCarousel />
-      <CTABanner />
+
+      <CTABanner
+        title="Ready to Start Your Creative Journey?"
+        subtitle="Join Tasvee Design School and transform your passion into profession with Online & Offline learning options, practical projects, expert mentorship, and career-focused training."
+        tagline="Learn from Anywhere. Create Without Limits. Grow with Confidence."
+      />
     </>
   );
 }

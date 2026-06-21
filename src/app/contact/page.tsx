@@ -17,7 +17,7 @@ import { FAQAccordion } from "./FAQAccordion";
 export const metadata = createPageMetadata({
   title: "Contact Us",
   description:
-    "Get in touch with Tasvee Design School in Kanpur. Book a demo class, ask about courses, admissions, or career guidance. We reply within 24 hours.",
+    "Get in touch with Tasvee Design School in Kota. Ask about courses, admissions, or career guidance. We reply within 24 hours.",
   path: "/contact",
 });
 
@@ -161,7 +161,7 @@ export default function ContactPage() {
           <div className="aspect-[21/9] w-full min-h-[240px] bg-gradient-to-br from-gray-800 to-gray-900">
             <iframe
               title="Tasvee Design School location on map"
-              src="https://maps.google.com/maps?q=Kanpur,Uttar+Pradesh,India&output=embed"
+              src={`https://maps.google.com/maps?q=${encodeURIComponent(siteConfig.mapQuery)}&output=embed`}
               className="h-full w-full border-0 opacity-80"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
@@ -169,11 +169,11 @@ export default function ContactPage() {
           </div>
           <div className="border-t border-white/10 bg-tasvee-black p-6 text-white md:absolute md:left-8 md:top-1/2 md:max-w-sm md:-translate-y-1/2 md:rounded-2xl md:border md:bg-tasvee-black/95 md:p-6 md:shadow-xl lg:left-16">
             <h2 className="text-lg font-bold">
-              We&apos;re Located in Kanpur, UP
+              We&apos;re Located in {siteConfig.city}, Rajasthan
             </h2>
             <p className="mt-2 text-sm text-gray-400">{siteConfig.fullAddress}</p>
             <Button
-              href="https://maps.google.com/?q=Kanpur,Uttar+Pradesh,India"
+              href={`https://maps.google.com/?q=${encodeURIComponent(siteConfig.mapQuery)}`}
               variant="outline"
               className="mt-4"
             >
@@ -224,8 +224,10 @@ export default function ContactPage() {
             telephone: siteConfig.phone,
             address: {
               "@type": "PostalAddress",
-              addressLocality: "Kanpur",
-              addressRegion: "Uttar Pradesh",
+              addressLocality: "Kota",
+              addressRegion: "Rajasthan",
+              streetAddress: siteConfig.fullAddress,
+              postalCode: "324007",
               addressCountry: "IN",
             },
           }),
